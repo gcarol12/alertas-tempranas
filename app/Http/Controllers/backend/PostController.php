@@ -38,12 +38,18 @@ class PostController extends Controller
      */
     public function store(PostRequest $request)
     {
-        dd($request->all());
+        /**  
+         * dd($request->all());
+         * esta comentado para que en pantalla aparezca
+         * "ceado con exito" al enviar un post, debo descomentar
+         * hasta el ";" y comenzando en "dd" para ver los detalles de la 
+         * informacioón enviada en el formulario, como tipos de archivo y mas
+        */
         //Salvar
 
         $post = Post::create([
             'user_id' => auth()->user()->id
-        ] + $request->all()        
+        ] + $request->validated()        
         );
 
         //Imagen
