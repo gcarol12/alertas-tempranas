@@ -70,10 +70,10 @@ class PostController extends Controller
      * @param  \App\Models\Post  $post
      * @return \Illuminate\Http\Response
      */
-    public function show(Post $post)
-    {
+    //public function show(Post $post) el profe pidio eliminarlo pero lo dejo para cambios futuros solo comentado 
+    //{
         //
-    }
+    //}
 
     /**
      * Show the form for editing the specified resource.
@@ -83,7 +83,7 @@ class PostController extends Controller
      */
     public function edit(Post $post)
     {
-        //
+        return view('posts.edit', compact('post'));
     }
 
     /**
