@@ -5,6 +5,7 @@ namespace App\Http\Controllers\backend;
 use App\Http\Controllers\Controller;
 use App\Models\Post;
 use App\Http\Requests\PostRequest;
+use Illuminate\Support\Facades\Storage; //importamos para eliminar img
 
 class PostController extends Controller
 {
@@ -93,9 +94,20 @@ class PostController extends Controller
      * @param  \App\Models\Post  $post
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Post $post)
-    {
-        //
+    public function update(PostRequest $request, Post $post)
+    {    
+        $post->update($request->all());
+
+        if ($request->file('file')) {
+            
+            Storage::disk('public')->delete($post->image);//eliminamos foto existente
+
+            $post->image = $request->file('file')-> store('posts', 'public');                
+            $post->save();
+
+            } 
+
+            return back()->with('status', 'Actualizado con éxito');
     }
 
     /**
@@ -106,6 +118,9 @@ class PostController extends Controller
      */
     public function destroy(Post $post)
     {
-        //
+        Storage::disk('public')->delete($post->image);//eliminamos foto existent     
+        $post->delete();
+
+        return back()->with('status', 'Eliminado con éxito');
     }
 }

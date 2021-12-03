@@ -29,7 +29,7 @@
                     </div>
                     
                     <div class="form-group">
-                        <lable>image</label>
+                        <lable>Elige una imagen</label>
                         <input 
                             type="file" 
                             name="file">
