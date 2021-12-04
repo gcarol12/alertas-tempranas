@@ -25,13 +25,13 @@
                         @endguest
 
               <!-- Right Side -->  
-                        <a class="navbar-brand" href="{{ url('/') }}">
+                        <a class="navbar-brand " href="{{ url('/') }}">
                             {{ 'aqui debe ir la imagen de alertas' }}
                         </a>
                         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                              <span class="navbar-toggler-icon"></span>
                         </button>
              </div>
-        </nav>
-    </div>
+        </div>
+    </nav>
 </body>
