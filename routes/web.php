@@ -25,3 +25,10 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::resource('posts', App\Http\Controllers\Backend\PostController::class)
 ->middleware('auth')
 ->except('show');
+ 
+Route::get('/profile/{id}', function ($id) {
+    $user  =App\Models\User::find($id);
+    return view('profile', [
+        'user'=>$user
+    ]);
+})->name('profile');

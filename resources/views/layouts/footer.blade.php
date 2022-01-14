@@ -1,7 +1,4 @@
 <body>
-<p>cerrar sesión</p>
-<p>alertas tempranas bonito</p>
-
 <div id="app">
         <nav class="navbar navbar-expand-md navbar-light">
             <div class="container">             
@@ -25,7 +22,7 @@
                         @endguest
 
               <!-- Right Side -->  
-                        <a class="navbar-brand " href="{{ url('/') }}">
+                        <a class="navbar-brand " href="{{ url('home') }}">
                             {{ 'aqui debe ir la imagen de alertas' }}
                         </a>
                         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
