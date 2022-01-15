@@ -28,7 +28,7 @@
 
                             <div class="col-md-6">
                                 <button type="submit" class="form-control">                                 
-                                    <a class="btn md-auto center" href="{{ route('posts.index') }}">
+                                    <a class="btn md-auto center" href="{{ route('via.tutela') }}">
                                         {{ __('Tutela') }}
                                     </a>                               
                                 </button>                                
@@ -40,7 +40,7 @@
 
                             <div class="col-md-6">
                                 <button type="submit" class="form-control">
-                                    <a class="btn md-auto center" href="{{ route('posts.index') }}">
+                                    <a class="btn md-auto center" href="{{ route('via/sancion') }}">
                                         {{ __('Sanción') }}
                                     </a>  
                                 </button>
@@ -52,7 +52,7 @@
 
                             <div class="col-md-6">
                                 <button type="submit" class="form-control">
-                                    <a class="btn md-auto center" href="{{ route('posts.index') }}">
+                                    <a class="btn md-auto center" href="{{ route('via/compensacion') }}">
                                          {{ __('Compensación') }}
                                     </a>  
                                 </button>
@@ -64,7 +64,7 @@
 
                             <div class="col-md-6">
                                 <button type="submit" class="form-control text-md-right">
-                                    <a class="btn md-auto center" href="{{ route('posts.index') }}">
+                                    <a class="btn md-auto center" href="{{ route('via/fic') }}">
                                         {{ __('FIC') }}
                                     </a>  
                                 </button>
@@ -76,7 +76,7 @@
 
                             <div class="col-md-6">
                                 <button type="submit" class="form-control text-md-right">
-                                    <a class="btn md-auto center" href="{{ route('posts.index') }}">
+                                    <a class="btn md-auto center" href="{{ route('via.recursos') }}">
                                         {{ __('Recursos') }}
                                     </a>  
                                 </button>
@@ -88,7 +88,7 @@
 
                             <div class="col-md-6">
                                 <button type="submit" class="form-control text-md-right">
-                                    <a class="btn md-auto center" href="{{ route('posts.index') }}">
+                                    <a class="btn md-auto center" href="{{ route('via.insolvencia') }}">
                                         {{ __('Insolvencia') }}
                                     </a>  
                                 </button>
@@ -100,7 +100,7 @@
 
                             <div class="col-md-6">
                                 <button type="submit" class="form-control text-md-right">
-                                    <a class="btn md-auto center" href="{{ route('posts.index') }}">
+                                    <a class="btn md-auto center" href="{{ route('via/autocargos') }}">
                                         {{ __('Auto de cargos') }}
                                     </a>  
                                 </button>
@@ -112,7 +112,7 @@
 
                             <div class="col-md-6">
                                 <button type="submit" class="form-control text-md-right">
-                                    <a class="btn md-auto center" href="{{ route('posts.index') }}">
+                                    <a class="btn md-auto center" href="{{ route('via/pqrs') }}">
                                         {{ __('PQRS') }}
                                     </a>  
                                 </button>
