@@ -33,7 +33,7 @@
                         @else
                             
                             <li class="nav-item">
-                                <a href="{{ URL::previous() }}" class="nav-link">
+                                <a href="{{ url()->previous() }}" class="nav-link">
                                     Logo retornar a pagina anterior
                                 </a>
                             </li>

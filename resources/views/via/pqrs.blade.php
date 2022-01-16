@@ -8,7 +8,7 @@
                 <div class="card-header">
                 <div class="row justify-content-center">
                             <div class="col-md-3">
-                                {{ __('Proceso a Ingresar') }}
+                                {{ __('PQRS') }}
                             </div>
                     </div>
                 </div>
@@ -28,8 +28,8 @@
 
                             <div class="col-md-6">
                                 <button type="submit" class="form-control">                                 
-                                    <a class="btn md-auto center" href="{{ route('via.tutela') }}">
-                                        {{ __('Tutela') }}
+                                    <a class="btn md-auto center" href="{{ ('') }}">
+                                        {{ __('nº radicado SENA') }}
                                     </a>                               
                                 </button>                                
                             </div>
@@ -40,8 +40,8 @@
 
                             <div class="col-md-6">
                                 <button type="submit" class="form-control">
-                                    <a class="btn md-auto center" href="{{ route('via/sancion') }}">
-                                        {{ __('Sanción') }}
+                                    <a class="btn md-auto center" href="{{ ('') }}">
+                                        {{ __('Fecha de radicación SENA') }}
                                     </a>  
                                 </button>
                             </div>
@@ -52,8 +52,8 @@
 
                             <div class="col-md-6">
                                 <button type="submit" class="form-control">
-                                    <a class="btn md-auto center" href="{{ route('via/compensacion') }}">
-                                         {{ __('Compensación') }}
+                                    <a class="btn md-auto center" href="{{ ('') }}">
+                                         {{ __('Nombre del peticionario') }}
                                     </a>  
                                 </button>
                             </div>
@@ -64,8 +64,8 @@
 
                             <div class="col-md-6">
                                 <button type="submit" class="form-control text-md-right">
-                                    <a class="btn md-auto center" href="{{ route('via/fic') }}">
-                                        {{ __('FIC') }}
+                                    <a class="btn md-auto center" href="{{ ('') }}">
+                                        {{ __('NIT del peticionario') }}
                                     </a>  
                                 </button>
                             </div>
@@ -76,8 +76,8 @@
 
                             <div class="col-md-6">
                                 <button type="submit" class="form-control text-md-right">
-                                    <a class="btn md-auto center" href="{{ route('via.recursos') }}">
-                                        {{ __('Recursos') }}
+                                    <a class="btn md-auto center" href="{{ ('') }}">
+                                        {{ __('E-MAIL del peticionario') }}
                                     </a>  
                                 </button>
                             </div>
@@ -88,8 +88,8 @@
 
                             <div class="col-md-6">
                                 <button type="submit" class="form-control text-md-right">
-                                    <a class="btn md-auto center" href="{{ route('via.insolvencia') }}">
-                                        {{ __('Insolvencia') }}
+                                    <a class="btn md-auto center" href="{{ ('') }}">
+                                        {{ __('Seleccionar si es traslado o respuesta(3 días)') }}
                                     </a>  
                                 </button>
                             </div>
@@ -100,40 +100,13 @@
 
                             <div class="col-md-6">
                                 <button type="submit" class="form-control text-md-right">
-                                    <a class="btn md-auto center" href="{{ route('via/autocargos') }}">
-                                        {{ __('Auto de cargos') }}
+                                    <a class="btn md-auto center" href="{{ ('') }}">
+                                        {{ __('Respuesta PQRS (8 DÍAS)') }}
                                     </a>  
                                 </button>
                             </div>
-                        </div>
-
-                        <div class="row mb-3">
-                            <label for="generar-reporte" class="col-md-4 col-form-label text-md-right">{{ __('logodocumento') }}</label>
-
-                            <div class="col-md-6">
-                                <button type="submit" class="form-control text-md-right">
-                                    <a class="btn md-auto center" href="{{ route('via/pqrs') }}">
-                                        {{ __('PQRS') }}
-                                    </a>  
-                                </button>
-                            </div>
-                        </div>
-                        <div class="row mb-3">
-                            <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('Responsable del seguimiento') }}</label>
-
-                            <div class="col-md-6">
-                                <!--<input id="email" type="email" class="form-control @error('email') is-invalid @enderror" placeholder="Seleccione" name="email" value="{{ old('email') }}" required>-->
-                                <select name="select" class="form-control"  required>
-                                    <option selected value="0">  {{ __('Seleccione responsable') }}
-                                        <optgroup label="Regional Valle">
-                                            <option value="1"> lista de responsables adjudicados al departamento al cual pertenece usuario que crea registro </option>
-                                            <option value="2"> Defensa Judicial </option>
-                                            <option value="3"> Cobro coactivo </option>
-                                    </option>
-                                </select>
-                            </div>
-                        </div>
-
+                        </div>                     
+                                                                        
                     </form>
                 </div>
             </div>

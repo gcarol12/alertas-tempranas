@@ -8,7 +8,7 @@
                 <div class="card-header">
                 <div class="row justify-content-center">
                             <div class="col-md-3">
-                                {{ __('Proceso a Ingresar') }}
+                                {{ __('Insolvencia)') }}
                             </div>
                     </div>
                 </div>
@@ -29,7 +29,7 @@
                             <div class="col-md-6">
                                 <button type="submit" class="form-control">                                 
                                     <a class="btn md-auto center" href="{{ route('via.tutela') }}">
-                                        {{ __('Tutela') }}
+                                        {{ __('Nº de liquidación') }}
                                     </a>                               
                                 </button>                                
                             </div>
@@ -41,7 +41,7 @@
                             <div class="col-md-6">
                                 <button type="submit" class="form-control">
                                     <a class="btn md-auto center" href="{{ route('via/sancion') }}">
-                                        {{ __('Sanción') }}
+                                        {{ __('Fecha de liquidación') }}
                                     </a>  
                                 </button>
                             </div>
@@ -53,7 +53,7 @@
                             <div class="col-md-6">
                                 <button type="submit" class="form-control">
                                     <a class="btn md-auto center" href="{{ route('via/compensacion') }}">
-                                         {{ __('Compensación') }}
+                                         {{ __('Razón social') }}
                                     </a>  
                                 </button>
                             </div>
@@ -65,7 +65,7 @@
                             <div class="col-md-6">
                                 <button type="submit" class="form-control text-md-right">
                                     <a class="btn md-auto center" href="{{ route('via/fic') }}">
-                                        {{ __('FIC') }}
+                                        {{ __('NIT') }}
                                     </a>  
                                 </button>
                             </div>
@@ -77,7 +77,7 @@
                             <div class="col-md-6">
                                 <button type="submit" class="form-control text-md-right">
                                     <a class="btn md-auto center" href="{{ route('via.recursos') }}">
-                                        {{ __('Recursos') }}
+                                        {{ __('') }}
                                     </a>  
                                 </button>
                             </div>
@@ -89,7 +89,7 @@
                             <div class="col-md-6">
                                 <button type="submit" class="form-control text-md-right">
                                     <a class="btn md-auto center" href="{{ route('via.insolvencia') }}">
-                                        {{ __('Insolvencia') }}
+                                        {{ __('') }}
                                     </a>  
                                 </button>
                             </div>
@@ -101,7 +101,7 @@
                             <div class="col-md-6">
                                 <button type="submit" class="form-control text-md-right">
                                     <a class="btn md-auto center" href="{{ route('via/autocargos') }}">
-                                        {{ __('Auto de cargos') }}
+                                        {{ __('') }}
                                     </a>  
                                 </button>
                             </div>
@@ -113,7 +113,7 @@
                             <div class="col-md-6">
                                 <button type="submit" class="form-control text-md-right">
                                     <a class="btn md-auto center" href="{{ route('via/pqrs') }}">
-                                        {{ __('PQRS') }}
+                                        {{ __('') }}
                                     </a>  
                                 </button>
                             </div>

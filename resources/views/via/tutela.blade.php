@@ -89,23 +89,22 @@
                             <div class="col-md-6">
                                 <button type="submit" class="form-control text-md-right">
                                     <a class="btn md-auto center" href="{{ ('') }}">
-                                        {{ __('Respuesta TUTELA 10 dias') }}
+                                        {{ __('Respuesta TUTELA (manual)') }}
                                     </a>  
                                 </button>
                             </div>
                         </div>
                         
+                        
                         <div class="row mb-3">
-                            <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('Impugnacion') }}</label>
+                            <label for="generar-reporte" class="col-md-4 col-form-label text-md-right">{{ __('logodocumento') }}</label>
 
                             <div class="col-md-6">
-                                <!--<input id="email" type="email" class="form-control @error('email') is-invalid @enderror" placeholder="Seleccione" name="email" value="{{ old('email') }}" required>-->
-                                <select name="select" class="form-control"  required>
-                                    <option selected value="0">  {{ __('¿Impugnación?') }}
-                                        <optgroup label="selccione">
-                                            <option value="1"> si </option>
-                                            <option value="2"> no </option>                                                                                </option>
-                                </select>
+                                <button type="submit" class="form-control text-md-right">
+                                    <a class="btn md-auto center" href="{{ ('') }}">
+                                        {{ __('Fallo primera instancia (10 días)') }}
+                                    </a>  
+                                </button>
                             </div>
                         </div>
 
@@ -115,7 +114,7 @@
                             <div class="col-md-6">
                                 <button type="submit" class="form-control text-md-right">
                                     <a class="btn md-auto center" href="{{ ('') }}">
-                                        {{ __('Fallo segunda instancia 10 dias') }}
+                                        {{ __('Impugnmación (manual)') }}
                                     </a>  
                                 </button>
                             </div>
