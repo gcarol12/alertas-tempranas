@@ -37,7 +37,7 @@
   --bs-danger: #dc3545;
   --bs-light: #f8f9fa;
   --bs-dark: #212529;
-  --bs-primary-rgb: 13, 110, 253;
+  --bs-primary-rgb: 35, 130, 118;
   --bs-secondary-rgb: 108, 117, 125;
   --bs-success-rgb: 25, 135, 84;
   --bs-info-rgb: 13, 202, 240;
@@ -57,7 +57,7 @@
   --bs-body-font-weight: 400;
   --bs-body-line-height: 1.6;
   --bs-body-color: #212529;
-  --bs-body-bg: #f8fafc;
+  --bs-body-bg: #ffffff;
 }
 
 *,
@@ -231,7 +231,7 @@ sup {
 }
 
 a {
-  color: #0d6efd;
+  color: #fc7323;
   text-decoration: underline;
 }
 a:hover {
@@ -3588,18 +3588,18 @@ textarea.form-control-lg {
 }
 
 @media (min-width: 576px) {
-  .dropdown-menu-sm-start {
+  .dropdown-menu-md-start {
     --bs-position: start;
   }
-  .dropdown-menu-sm-start[data-bs-popper] {
+  .dropdown-menu-md-start[data-bs-popper] {
     right: auto;
     left: 0;
   }
 
-  .dropdown-menu-sm-end {
+  .dropdown-menu-md-end {
     --bs-position: end;
   }
-  .dropdown-menu-sm-end[data-bs-popper] {
+  .dropdown-menu-md-end[data-bs-popper] {
     right: 0;
     left: auto;
   }
@@ -4117,28 +4117,28 @@ textarea.form-control-lg {
 }
 
 @media (min-width: 576px) {
-  .navbar-expand-sm {
+  .navbar-expand-md {
     flex-wrap: nowrap;
     justify-content: flex-start;
   }
-  .navbar-expand-sm .navbar-nav {
+  .navbar-expand-md .navbar-nav {
     flex-direction: row;
   }
-  .navbar-expand-sm .navbar-nav .dropdown-menu {
+  .navbar-expand-md .navbar-nav .dropdown-menu {
     position: absolute;
   }
-  .navbar-expand-sm .navbar-nav .nav-link {
+  .navbar-expand-md .navbar-nav .nav-link {
     padding-right: 0.5rem;
     padding-left: 0.5rem;
   }
-  .navbar-expand-sm .navbar-nav-scroll {
+  .navbar-expand-md .navbar-nav-scroll {
     overflow: visible;
   }
-  .navbar-expand-sm .navbar-collapse {
+  .navbar-expand-md .navbar-collapse {
     display: flex !important;
     flex-basis: auto;
   }
-  .navbar-expand-sm .navbar-toggler {
+  .navbar-expand-md .navbar-toggler {
     display: none;
   }
   .navbar-expand-sm .offcanvas-header {
@@ -4511,7 +4511,7 @@ textarea.form-control-lg {
   word-wrap: break-word;
   background-color: #fff;
   background-clip: border-box;
-  border: 1px solid rgba(0, 0, 0, 0.125);
+  border: 1px solid rgb(255, 255, 255);
   border-radius: 0.25rem;
 }
 .card > hr {
@@ -4562,8 +4562,8 @@ textarea.form-control-lg {
 .card-header {
   padding: 0.5rem 1rem;
   margin-bottom: 0;
-  background-color: rgba(0, 0, 0, 0.03);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+  background-color: rgb(255, 255, 255);
+  border-bottom: 1px solid rgb(255, 255, 255);
 }
 .card-header:first-child {
   border-radius: calc(0.25rem - 1px) calc(0.25rem - 1px) 0 0;

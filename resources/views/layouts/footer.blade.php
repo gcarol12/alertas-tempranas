@@ -23,7 +23,7 @@
 
               <!-- Right Side -->  
                         <a class="navbar-brand " href="{{ url('home') }}">
-                            {{ 'aqui debe ir la imagen de alertas' }}
+                        <img src="https://i.imgur.com/qDFttvD.jpg" width=" 300vw" title="logo alertas tempranas" />
                         </a>
                         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                              <span class="navbar-toggler-icon"></span>

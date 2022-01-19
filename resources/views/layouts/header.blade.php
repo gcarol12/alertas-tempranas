@@ -3,7 +3,8 @@
         <nav class="navbar navbar-expand-md navbar-light">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('home') }}">
-                    {{ config('app.name', 'AT') }}
+                   <!--{{ config('app.name', 'AT') }} -->
+                    <img src="https://i.imgur.com/wh7a08C.jpg" width=" 200vw" title="logo SENA negativo y color de AT" />
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
@@ -34,13 +35,13 @@
                             
                             <li class="nav-item">
                                 <a href="{{ url()->previous() }}" class="nav-link">
-                                    Logo retornar a pagina anterior
+                                <img src="https://i.imgur.com/T4O23ql.jpg" width=" 50vw" title="regresar" />
                                 </a>
                             </li>
 
                             <li class="nav-item">
                                 <a href="{{ url('home') }}" class="nav-link">
-                                    logo Home
+                                <img src="https://i.imgur.com/gHXDACk.jpg" width=" 50vw" title="home" />
                                 </a>
                             </li>
 
