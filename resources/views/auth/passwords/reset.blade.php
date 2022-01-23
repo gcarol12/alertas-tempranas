@@ -1,11 +1,13 @@
-@extends('layouts.app')
+@extends('layouts.appini')
 
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-8">
+        <div class="col-md-7">
             <div class="card">
-                <div class="card-header">{{ __('Reset Password') }}</div>
+                <div class="card-header" align="center">
+                    <h1>{{ __('Reset Password') }}</h1>
+                </div>
 
                 <div class="card-body">
                     <form method="POST" action="{{ route('password.update') }}">
@@ -61,5 +63,12 @@
             </div>
         </div>
     </div>
+</div>
+
+<div class="container">  
+             
+    <a class="navbar-brand " href="{{ url('home') }}">
+       <img src="https://i.imgur.com/mwIHkUF.jpg" width=" 100%" align="center" title="logo alertas tempranas sin inicio de sesión" />
+    </a>                                                
 </div>
 @endsection

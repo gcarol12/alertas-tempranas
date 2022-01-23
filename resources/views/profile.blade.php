@@ -3,12 +3,12 @@
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-5">
+        <div class="col-md-7">
             <div class="card">
                 <div class="card-header">
                     <div class="row justify-content-center">
-                            <div class="col-md-6">
-                            {{ __('Mi perfil') }} <img src="https://i.imgur.com/J8bMNoj.jpg" width=" 50vw" title="perfil" />
+                            <div class="col-md-8" align="center">
+                           <h1> {{ __('Mi perfil') }} <img src="https://i.imgur.com/J8bMNoj.jpg" width=" 50vw" title="perfil" /></h1> 
                             </div>
                     </div>
                 </div>
@@ -21,9 +21,9 @@
                             <label for="name" class="col-md-2 col-form-label text-md-right"> <img src="https://i.imgur.com/OoStcBs.jpg" width=" 50vw" title="usuario" /> </label>
 
                             <div class="col-md-8">
-                                <h1 id="name" name="name" class="form-control">
+                                <h2 id="name" name="name" class="form-control">
                                     {{ Auth::user()->name }}
-                                </h1>                                                          
+                                </h2>                                                          
                             </div>
                         </div>
 
@@ -31,9 +31,9 @@
                             <label for="email" class="col-md-2 col-form-label text-md-right"> <img src="https://i.imgur.com/lf6TIiN.jpg" width=" 50vw" title="email" /> </label>
 
                             <div class="col-md-8">
-                                <h1 id="email" name="email" class="form-control">
+                                <h2 id="email" name="email" class="form-control">
                                     {{ Auth::user()->email }}
-                                </h1>
+                                </h2>
                             </div>
                         </div>
 
@@ -41,9 +41,9 @@
                             <label for="title"class="col-md-2 col-form-label text-md-right"> <img src="https://i.imgur.com/AFLbkBs.jpg" width=" 50vw" title="celular" /> </label>
                             
                             <div class="col-md-8">
-                                <h1 id="email" name="email" class="form-control">
+                                <h2 id="email" name="email" class="form-control">
                                     {{ Auth::user()->email }}
-                                </h1>
+                                </h2>
                             </div>
                         </div>
 
@@ -51,9 +51,9 @@
                             <label for="title"class="col-md-2 col-form-label text-md-right"> <img src="https://i.imgur.com/ywDs8cM.jpg" width=" 50vw" title="seleccionar" /> </label>
                             
                             <div class="col-md-8">
-                                <h1 id="email" name="email" class="form-control">
+                                <h2 id="email" name="email" class="form-control">
                                     {{ Auth::user()->email }}
-                            </h1>
+                            </h2>
                             </div>
                         </div>
                         

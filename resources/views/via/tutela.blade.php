@@ -3,12 +3,12 @@
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-8">
+        <div class="col-md-7">
             <div class="card">
                 <div class="card-header">
                 <div class="row justify-content-center">
-                            <div class="col-md-3">
-                                {{ __('Tutela') }}
+                            <div class="col-md-8" align="center">
+                               <h1> {{ __('Tutela') }}</h1>
                             </div>
                     </div>
                 </div>
@@ -23,22 +23,22 @@
                     <form method="POST" action="{{ route('login') }}">
                         @csrf
 
-                        <div class="row mb-3">
-                            <label for="Ingresar-proceso" class="col-md-4 col-form-label text-md-right">{{ __('logoarchivo') }}</label>
+                        <div class="row mb-6">
+                            <label for="Ingresar-proceso" class="col-md-2 col-form-label text-md-right"><img src="https://i.imgur.com/VySFrZw.jpg" width=" 50vw" title="proceso"/></label>
 
-                            <div class="col-md-6">
+                            <div class="col-md-8">
                                 <button type="submit" class="form-control">                                 
                                     <a class="btn md-auto center" href="{{ ('') }}">
-                                        {{ __('nº radicado SENA') }}
+                                        {{ __('Nº radicado SENA') }}
                                     </a>                               
                                 </button>                                
                             </div>
                         </div>
 
-                        <div class="row mb-3">
-                            <label for="Buscar-proceso" class="col-md-4 col-form-label text-md-right">{{ __('logolupa') }}</label>
+                        <div class="row mb-6">
+                            <label for="Buscar-proceso" class="col-md-2 col-form-label text-md-right"><img src="https://i.imgur.com/UGz4PAr.jpg" width=" 50vw" title="calendario"/></label>
 
-                            <div class="col-md-6">
+                            <div class="col-md-8">
                                 <button type="submit" class="form-control">
                                     <a class="btn md-auto center" href="{{ ('') }}">
                                         {{ __('Fecha de radicación SENA') }}
@@ -47,10 +47,10 @@
                             </div>
                         </div>
                     
-                        <div class="row mb-3">
-                            <label for="perfil" class="col-md-4 col-form-label text-md-right">{{ __('logoperfil') }}</label>
+                        <div class="row mb-6">
+                            <label for="perfil" class="col-md-2 col-form-label text-md-right"><img src="https://i.imgur.com/OoStcBs.jpg" width=" 50vw" title="usuario"/></label>
 
-                            <div class="col-md-6">
+                            <div class="col-md-8">
                                 <button type="submit" class="form-control">
                                     <a class="btn md-auto center" href="{{ ('') }}">
                                          {{ __('Nombre del accionante') }}
@@ -59,10 +59,10 @@
                             </div>
                         </div>  
                         
-                        <div class="row mb-3">
-                            <label for="generar-reporte" class="col-md-4 col-form-label text-md-right">{{ __('logodocumento') }}</label>
+                        <div class="row mb-6">
+                            <label for="generar-reporte" class="col-md-2 col-form-label text-md-right"><img src="https://i.imgur.com/J8bMNoj.jpg" width=" 50vw" title="perfil"/></label>
 
-                            <div class="col-md-6">
+                            <div class="col-md-8">
                                 <button type="submit" class="form-control text-md-right">
                                     <a class="btn md-auto center" href="{{ ('') }}">
                                         {{ __('NIT') }}
@@ -71,10 +71,10 @@
                             </div>
                         </div>
 
-                        <div class="row mb-3">
-                            <label for="generar-reporte" class="col-md-4 col-form-label text-md-right">{{ __('logodocumento') }}</label>
+                        <div class="row mb-6">
+                            <label for="generar-reporte" class="col-md-2 col-form-label text-md-right"><img src="https://i.imgur.com/lf6TIiN.jpg" width=" 50vw" title="email"/> </label>
 
-                            <div class="col-md-6">
+                            <div class="col-md-8">
                                 <button type="submit" class="form-control text-md-right">
                                     <a class="btn md-auto center" href="{{ ('') }}">
                                         {{ __('E-MAIL del accionante') }}
@@ -82,44 +82,7 @@
                                 </button>
                             </div>
                         </div>
-
-                        <div class="row mb-3">
-                            <label for="generar-reporte" class="col-md-4 col-form-label text-md-right">{{ __('logodocumento') }}</label>
-
-                            <div class="col-md-6">
-                                <button type="submit" class="form-control text-md-right">
-                                    <a class="btn md-auto center" href="{{ ('') }}">
-                                        {{ __('Respuesta TUTELA (manual)') }}
-                                    </a>  
-                                </button>
-                            </div>
-                        </div>
-                        
-                        
-                        <div class="row mb-3">
-                            <label for="generar-reporte" class="col-md-4 col-form-label text-md-right">{{ __('logodocumento') }}</label>
-
-                            <div class="col-md-6">
-                                <button type="submit" class="form-control text-md-right">
-                                    <a class="btn md-auto center" href="{{ ('') }}">
-                                        {{ __('Fallo primera instancia (10 días)') }}
-                                    </a>  
-                                </button>
-                            </div>
-                        </div>
-
-                        <div class="row mb-3">
-                            <label for="generar-reporte" class="col-md-4 col-form-label text-md-right">{{ __('logodocumento') }}</label>
-
-                            <div class="col-md-6">
-                                <button type="submit" class="form-control text-md-right">
-                                    <a class="btn md-auto center" href="{{ ('') }}">
-                                        {{ __('Impugnmación (manual)') }}
-                                    </a>  
-                                </button>
-                            </div>
-                        </div>
-
+                    
                     </form>
                 </div>
             </div>

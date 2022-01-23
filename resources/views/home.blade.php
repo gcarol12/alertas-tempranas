@@ -3,12 +3,12 @@
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-5">
+        <div class="col-md-7">
             <div class="card">
                 <div class="card-header">
                 <div class="row justify-content-center">
-                            <div class="col-md-6">
-                                {{ __('Menú principal') }} <img src="https://i.imgur.com/gHXDACk.jpg" width=" 50vw" title="home" />
+                            <div class="col-md-8" align="center">
+                               <h1> {{ __('Menú principal') }} <img src="https://i.imgur.com/gHXDACk.jpg" width=" 50vw" title="home" /></h1>
                             </div>
                     </div>
                 </div>

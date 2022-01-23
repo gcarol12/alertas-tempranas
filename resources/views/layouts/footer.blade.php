@@ -9,7 +9,7 @@
                             @if (Route::has('login'))                                
                             @endif 
                         @else                           
-                        <a class="item" href="{{ route('logout') }}"
+                        <a class="item" align="left" href="{{ route('logout') }}"
                             onclick="event.preventDefault();
                             document.getElementById('logout-form').submit();">
                             {{ __('Cerrar sesión') }}
@@ -22,13 +22,11 @@
                         @endguest
 
               <!-- Right Side -->  
-                        <a class="navbar-brand " href="{{ url('home') }}">
-                        <img src="https://i.imgur.com/qDFttvD.jpg" width=" 300vw" title="logo alertas tempranas" />
-                        </a>
-                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
-                             <span class="navbar-toggler-icon"></span>
-                        </button>
+                    <a class="navbar-brand " href="{{ url('home') }}">
+                        <img src="https://i.imgur.com/qDFttvD.jpg" width=" 70%" align="right" title="logo alertas tempranas" />
+                    </a>                                                
              </div>
         </div>
     </nav>
+</div>
 </body>

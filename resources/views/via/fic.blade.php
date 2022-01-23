@@ -3,12 +3,12 @@
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-8">
+        <div class="col-md-7">
             <div class="card">
                 <div class="card-header">
                 <div class="row justify-content-center">
-                            <div class="col-md-3">
-                                {{ __('FIC (Fondo de la Industria y Construcción)') }}
+                            <div class="col-md-8" align="center">
+                               <h1> {{ __('FIC (Fondo de la Industria y Construcción)') }}</h1>
                             </div>
                     </div>
                 </div>
@@ -23,114 +23,63 @@
                     <form method="POST" action="{{ route('login') }}">
                         @csrf
 
-                        <div class="row mb-3">
-                            <label for="Ingresar-proceso" class="col-md-4 col-form-label text-md-right">{{ __('logoarchivo') }}</label>
+                        <div class="row mb-6">
+                            <label for="Ingresar-proceso" class="col-md-2 col-form-label text-md-right"><img src="https://i.imgur.com/VySFrZw.jpg" width=" 50vw" title="proceso"/></label>
 
-                            <div class="col-md-6">
+                            <div class="col-md-8">
                                 <button type="submit" class="form-control">                                 
-                                    <a class="btn md-auto center" href="{{ route('via.tutela') }}">
+                                    <a class="btn md-auto center" href="{{ ('') }}">
                                         {{ __('Nº de liquidación') }}
                                     </a>                               
                                 </button>                                
                             </div>
                         </div>
 
-                        <div class="row mb-3">
-                            <label for="Buscar-proceso" class="col-md-4 col-form-label text-md-right">{{ __('logolupa') }}</label>
+                        <div class="row mb-6">
+                            <label for="Buscar-proceso" class="col-md-2 col-form-label text-md-right"><img src="https://i.imgur.com/UGz4PAr.jpg" width=" 50vw" title="calendario"/></label>
 
-                            <div class="col-md-6">
+                            <div class="col-md-8">
                                 <button type="submit" class="form-control">
-                                    <a class="btn md-auto center" href="{{ route('via/sancion') }}">
+                                    <a class="btn md-auto center" href="{{ ('') }}">
                                         {{ __('Fecha de liquidación') }}
                                     </a>  
                                 </button>
                             </div>
                         </div>
                     
-                        <div class="row mb-3">
-                            <label for="perfil" class="col-md-4 col-form-label text-md-right">{{ __('logoperfil') }}</label>
+                        <div class="row mb-6">
+                            <label for="perfil" class="col-md-2 col-form-label text-md-right"><img src="https://i.imgur.com/OoStcBs.jpg" width=" 50vw" title="usuario"/></label>
 
-                            <div class="col-md-6">
+                            <div class="col-md-8">
                                 <button type="submit" class="form-control">
-                                    <a class="btn md-auto center" href="{{ route('via/compensacion') }}">
+                                    <a class="btn md-auto center" href="{{ ('') }}">
                                          {{ __('Razón social') }}
                                     </a>  
                                 </button>
                             </div>
                         </div>  
                         
-                        <div class="row mb-3">
-                            <label for="generar-reporte" class="col-md-4 col-form-label text-md-right">{{ __('logodocumento') }}</label>
+                        <div class="row mb-6">
+                            <label for="generar-reporte" class="col-md-2 col-form-label text-md-right"><img src="https://i.imgur.com/J8bMNoj.jpg" width=" 50vw" title="perfil"/></label>
 
-                            <div class="col-md-6">
+                            <div class="col-md-8">
                                 <button type="submit" class="form-control text-md-right">
-                                    <a class="btn md-auto center" href="{{ route('via/fic') }}">
+                                    <a class="btn md-auto center" href="{{ ('') }}">
                                         {{ __('NIT') }}
                                     </a>  
                                 </button>
                             </div>
                         </div>
 
-                        <div class="row mb-3">
-                            <label for="generar-reporte" class="col-md-4 col-form-label text-md-right">{{ __('logodocumento') }}</label>
+                        <div class="row mb-6">
+                            <label for="generar-reporte" class="col-md-2 col-form-label text-md-right"><img src="https://i.imgur.com/lf6TIiN.jpg" width=" 50vw" title="email"/> </label>
 
-                            <div class="col-md-6">
+                            <div class="col-md-8">
                                 <button type="submit" class="form-control text-md-right">
-                                    <a class="btn md-auto center" href="{{ route('via.recursos') }}">
-                                        {{ __('') }}
+                                    <a class="btn md-auto center" href="{{ ('') }}">
+                                        {{ __('E-MAIL') }}
                                     </a>  
                                 </button>
-                            </div>
-                        </div>
-
-                        <div class="row mb-3">
-                            <label for="generar-reporte" class="col-md-4 col-form-label text-md-right">{{ __('logodocumento') }}</label>
-
-                            <div class="col-md-6">
-                                <button type="submit" class="form-control text-md-right">
-                                    <a class="btn md-auto center" href="{{ route('via.insolvencia') }}">
-                                        {{ __('') }}
-                                    </a>  
-                                </button>
-                            </div>
-                        </div>
-
-                        <div class="row mb-3">
-                            <label for="generar-reporte" class="col-md-4 col-form-label text-md-right">{{ __('logodocumento') }}</label>
-
-                            <div class="col-md-6">
-                                <button type="submit" class="form-control text-md-right">
-                                    <a class="btn md-auto center" href="{{ route('via/autocargos') }}">
-                                        {{ __('') }}
-                                    </a>  
-                                </button>
-                            </div>
-                        </div>
-
-                        <div class="row mb-3">
-                            <label for="generar-reporte" class="col-md-4 col-form-label text-md-right">{{ __('logodocumento') }}</label>
-
-                            <div class="col-md-6">
-                                <button type="submit" class="form-control text-md-right">
-                                    <a class="btn md-auto center" href="{{ route('via/pqrs') }}">
-                                        {{ __('') }}
-                                    </a>  
-                                </button>
-                            </div>
-                        </div>
-                        <div class="row mb-3">
-                            <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('Responsable del seguimiento') }}</label>
-
-                            <div class="col-md-6">
-                                <!--<input id="email" type="email" class="form-control @error('email') is-invalid @enderror" placeholder="Seleccione" name="email" value="{{ old('email') }}" required>-->
-                                <select name="select" class="form-control"  required>
-                                    <option selected value="0">  {{ __('Seleccione responsable') }}
-                                        <optgroup label="Regional Valle">
-                                            <option value="1"> lista de responsables adjudicados al departamento al cual pertenece usuario que crea registro </option>
-                                            <option value="2"> Defensa Judicial </option>
-                                            <option value="3"> Cobro coactivo </option>
-                                    </option>
-                                </select>
                             </div>
                         </div>
 

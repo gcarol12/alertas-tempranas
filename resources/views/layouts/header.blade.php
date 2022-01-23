@@ -4,7 +4,7 @@
             <div class="container">
                 <a class="navbar-brand" href="{{ url('home') }}">
                    <!--{{ config('app.name', 'AT') }} -->
-                    <img src="https://i.imgur.com/wh7a08C.jpg" width=" 200vw" title="logo SENA negativo y color de AT" />
+                    <img src="https://i.imgur.com/wh7a08C.jpg" width=" 70%" title="logo SENA negativo y color de AT" />
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
