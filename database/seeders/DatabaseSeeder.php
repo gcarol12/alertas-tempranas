@@ -7,6 +7,8 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Str;
 use App\Models\User;
+use App\Models\Regional;
+use App\Models\Departamento;
 use App\Models\Post;
 
 class DatabaseSeeder extends Seeder
@@ -18,7 +20,9 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        //$this->call(UsersTableSeeder::class);
+        $this->call(RegionalSeeder::class);
+        $this->call(DepartamtoSeeder::class);
+
         User::create([
             'name' => 'Carolina Galvis Arango',
             'email' => 'cga@admin.com',

@@ -45,11 +45,17 @@
                             </div>
                         </div>
 
-                        <div class="row mb-6">                                                                                  
-                            <label for="title"class="col-md-2 col-form-label text-md-right">  <img src="https://i.imgur.com/AFLbkBs.jpg" width=" 50vw" title="celular"/> </label>
-                            
+                        <div class="row mb-6">
+                            <label for="phone" class="col-md-2 col-form-label text-md-right">  <img src="https://i.imgur.com/OoStcBs.jpg" width=" 50vw" title="phone"/> </label>
+
                             <div class="col-md-8">
-                                <input type="text" name="title" id="title"class="form-control" placeholder="Celular">
+                                <input id="phone" type="text" class="form-control @error('phone') is-invalid @enderror" name="phone" value="{{ old('phone') }}" placeholder="telefono" required autocomplete="phone">
+
+                                @error('phone')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
                             </div>
                         </div>
                         
@@ -72,23 +78,41 @@
 
                             <div class="col-md-8">
                                 <input id="password-confirm" type="password" class="form-control" name="password_confirmation" placeholder="Confirmar contraseña" required autocomplete="new-password">
-                            </div>
+                            </div>  
                         </div>
 
-                        <div class="row mb-6">
-                               <label for="email" class="col-md-2 col-form-label text-md-right">  <img src="https://i.imgur.com/ywDs8cM.jpg" width=" 50vw" title="seleccionar"/> </label>
+                        <div class="row mb-6 form-group{{ $errors->has('regional_id') ? ' has-error' : '' }}">
+                            <label for="regional" class="col-md-2 col-form-label text-md-right control-label"> <img src="https://i.imgur.com/ywDs8cM.jpg" width=" 50vw" title="seleccionar"/> </label>
+                                <div class="col-md-8">
+                                <select name="regional" class="form-control"  required>
+                                    <option selected value="0">  {{ __('Seleccione Regional') }} </option>
+                                      
+                                        <option value="1"> Regional Valle </option>
+                                </select>
+                <!--@if ($errors->has('regional_id'))
+                            <span class="help-block">
+                                <strong>{{ $errors->first('regional_id') }}</strong>
+                            </span>
+                        @endif-->
+                                </div>
+                        </div>
 
-                            <div class="col-md-8">
-                                <!--<input id="email" type="email" class="form-control @error('email') is-invalid @enderror" placeholder="Seleccione" name="email" value="{{ old('email') }}" required>-->
-                                <select name="select" class="form-control"  required>
-                                    <option selected value="0">  {{ __('Seleccione dependencia') }}
-                                        <optgroup label="Regional Valle">
+                        <div class="row mb-6 form-group{{ $errors->has('departamento') ? ' has-error' : '' }}">
+                            <label for="departamento" class="col-md-2 col-form-label text-md-right control-label"> <img src="https://i.imgur.com/ywDs8cM.jpg" width=" 50vw" title="seleccionar"/> </label>
+                                <div class="col-md-8">
+                                <select name="departamento_id" class="form-control"  required>
+                                    <option selected value="0">  {{ __('Seleccione Departamento') }}
                                             <option value="1"> Vía Gubernativa </option>
                                             <option value="2"> Defensa Judicial </option>
                                             <option value="3"> Cobro coactivo </option>
                                     </option>
                                 </select>
-                            </div> 
+                        @if ($errors->has('departamento'))
+                            <span class="help-block">
+                                <strong>{{ $errors->first('departamento') }}</strong>
+                            </span>
+                        @endif
+                                </div>
                         </div>
 
                         <div class="row mb-0">

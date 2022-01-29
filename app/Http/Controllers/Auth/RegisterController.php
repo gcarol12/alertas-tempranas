@@ -4,6 +4,8 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
+use App\Models\Regional;
+use App\Models\Departamento;
 use App\Models\User;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
@@ -52,9 +54,16 @@ class RegisterController extends Controller
         return Validator::make($data, [
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
+            'phone' => ['required', 'numeric', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
+            'departamentos_id' => ['required']
+          
         ]);
     }
+
+    /**asociar campos de regionales y departamentos */
+
+    public $departamentos ="";
 
     /**
      * Create a new user instance after a valid registration.
@@ -67,7 +76,22 @@ class RegisterController extends Controller
         return User::create([
             'name' => $data['name'],
             'email' => $data['email'],
+            'phone' => $data['phone'],
             'password' => Hash::make($data['password']),
+            'regionales' => Regional::all(),
+            'departamentos' => $this->departamentos,
+                    
+            
         ]);
+    }
+
+    public function listarDepartamentos($regional_id)
+    {
+        $this->comunas = Comuna::where('regional_id', $regional_id)->get();
+    }
+
+    public function mount()
+    {
+        $this->departamentos = Departamento::where('regional_id', 1)->get();
     }
 }
