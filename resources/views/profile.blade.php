@@ -38,21 +38,21 @@
                         </div>
 
                         <div class="row mb-6">                                                                                  
-                            <label for="title"class="col-md-2 col-form-label text-md-right"> <img src="https://i.imgur.com/AFLbkBs.jpg" width=" 50vw" title="celular" /> </label>
+                            <label for="phone"class="col-md-2 col-form-label text-md-right"> <img src="https://i.imgur.com/AFLbkBs.jpg" width=" 50vw" title="celular" /> </label>
                             
                             <div class="col-md-8">
-                                <h2 id="email" name="email" class="form-control">
-                                    {{ Auth::user()->email }}
+                                <h2 id="phone" name="phone" class="form-control">
+                                    {{ Auth::user()->phone }}
                                 </h2>
                             </div>
                         </div>
 
                         <div class="row mb-6">                                                                                  
-                            <label for="title"class="col-md-2 col-form-label text-md-right"> <img src="https://i.imgur.com/ywDs8cM.jpg" width=" 50vw" title="seleccionar" /> </label>
+                            <label for="departamento_id"class="col-md-2 col-form-label text-md-right"> <img src="https://i.imgur.com/ywDs8cM.jpg" width=" 50vw" title="seleccionar" /> </label>
                             
                             <div class="col-md-8">
-                                <h2 id="email" name="email" class="form-control">
-                                    {{ Auth::user()->email }}
+                                <h2 id="departamento_id" name="departamento_id" class="form-control">
+                                    {{ Auth::user()->departamento_id }}
                             </h2>
                             </div>
                         </div>
@@ -61,7 +61,7 @@
                             <label for="Buscar-proceso" class="col-md-2 col-form-label text-md-right"> <img src="https://i.imgur.com/TYhofNS.jpg" width=" 50vw" title="contraseña" /> </label>
 
                             <div class="col-md-8">
-                                <a class="form-control" href="{{ route('posts.index') }}">
+                                <a class="form-control" href="{{ route('password.update') }}">
                                         {{ __('Cambiar contraseña') }}
                                 </a>  
                            </div>

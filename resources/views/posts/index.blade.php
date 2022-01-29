@@ -25,7 +25,7 @@
 
                         <div class="row mb-2">
                             <label for="Ingresar-proceso" class="col-md-2 col-form-label text-md-right">
- </label>
+                            </label>
 
                             <div class="col-md-8">
                                 <button type="submit" class="form-control">                                 
