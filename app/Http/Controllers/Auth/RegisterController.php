@@ -56,15 +56,11 @@ class RegisterController extends Controller
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'phone' => ['required', 'numeric', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
-            'departamentos_id' => ['required']
-          
+                      
         ]);
     }
 
-    /**asociar campos de regionales y departamentos */
-
-    public $departamentos ="";
-
+       
     /**
      * Create a new user instance after a valid registration.
      *
@@ -77,21 +73,8 @@ class RegisterController extends Controller
             'name' => $data['name'],
             'email' => $data['email'],
             'phone' => $data['phone'],
-            'password' => Hash::make($data['password']),
-            'regionales' => Regional::all(),
-            'departamentos' => $this->departamentos,
-                    
-            
-        ]);
-    }
-
-    public function listarDepartamentos($regional_id)
-    {
-        $this->comunas = Comuna::where('regional_id', $regional_id)->get();
-    }
-
-    public function mount()
-    {
-        $this->departamentos = Departamento::where('regional_id', 1)->get();
-    }
+            'password' => Hash::make($data['password']),      
+                  
+            ]);
+    }   
 }
