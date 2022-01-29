@@ -70,7 +70,7 @@
                             <label for="regional" class="col-md-2 col-form-label text-md-right control-label"> <img src="https://i.imgur.com/ywDs8cM.jpg" width=" 50vw" title="seleccionar"/> </label>
                                 <div class="col-md-8">
                                 <select name="regional" class="form-control" wire::change='listarDepartamentos($event,target,value)' required>
-                                    <option selected value="0">  {{ __('Seleccione Regional') }} </option>
+                                    <option value="0">  {{ __('Seleccione Regional') }} </option>
                                      @foreach ($regionales as $regional)
                                      <option value="{{$regional->id}}">{{$regional->name}} </option>
                                      @endforeach
@@ -81,8 +81,8 @@
                         <div class="row mb-6 form-group">
                             <label for="departamento" class="col-md-2 col-form-label text-md-right control-label"> <img src="https://i.imgur.com/ywDs8cM.jpg" width=" 50vw" title="seleccionar"/> </label>
                                 <div class="col-md-8">
-                                <select name="departamento_id" class="form-control" required>
-                                    <option selected value="0">  {{ __('Seleccione Departamento') }} </option>
+                                <select name="departamento_id" class="form-control">
+                                    <option value="0">  {{ __('Seleccione Departamento') }} </option>
                                      @if ($departamentos)
 
                                         @foreach ($departamentos as $departamento)

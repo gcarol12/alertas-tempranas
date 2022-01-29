@@ -28,9 +28,12 @@
 
                             <div class="col-md-8">
                                 <button type="submit" class="form-control">                                 
+                                @if (Auth::user()->departamento_id == '1')
                                     <a class="btn md-auto center" href="{{ route('posts.index') }}">
                                         {{ __('Ingresar proceso') }}
-                                    </a>                               
+                                    </a>
+                                @endif
+                                                   
                                 </button>                                
                             </div>
                         </div>

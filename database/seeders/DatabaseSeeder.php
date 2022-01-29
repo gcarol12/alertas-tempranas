@@ -21,7 +21,7 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         $this->call(RegionalSeeder::class);
-        $this->call(DepartamtoSeeder::class);
+        $this->call(DepartamentoSeeder::class);
 
         User::create([
             'name' => 'Carolina Galvis Arango',
