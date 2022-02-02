@@ -20,39 +20,40 @@
                         </div>
                     @endif
                     
-                    <form method="POST" action="{{ route('login') }}">
+                    <form method="POST" action="{{ route('storetutela') }}" enctype="multipart/form-data">
                         @csrf
 
                         <div class="row mb-6">
-                            <label for="Ingresar-radicado" class="col-md-2 col-form-label text-md-right">  <img src="https://i.imgur.com/VySFrZw.jpg" width=" 50vw" title="proceso"> </label>
+                            <label for="radicado" class="col-md-2 col-form-label text-md-right">  <img src="https://i.imgur.com/VySFrZw.jpg" width=" 50vw" title="proceso"> </label>
 
                             <div class="col-md-8">
-                                <input id="Ingresar-radicado" type="text" class="form-control" name="Ingresar-radicado" placeholder="Nº radicado SENA" required>
+                                <input id="radicado" type="text" class="form-control" name="radicado" placeholder="Nº radicado SENA" required>
                             </div>  
                         </div>
+                        
                         <div class="row mb-6">
-                            <label for="Ingresar-fecha" class="col-md-2 col-form-label text-md-right"><img src="https://i.imgur.com/UGz4PAr.jpg" width=" 50vw" title="calendario"/></label>
+                            <label for="fecha" class="col-md-2 col-form-label text-md-right"><img src="https://i.imgur.com/UGz4PAr.jpg" width=" 50vw" title="calendario"/></label>
 
                             <div class="col-md-8">
-                            <input  id="Ingresar-fecha" class="form-control"  type="text" name="Ingresar-fecha" placeholder="Fecha de radicación SENA" 
+                            <input  id="fecha" class="form-control"  type="text" name="Ingresar-fecha" placeholder="Fecha de radicación SENA" 
                                     onclick="ocultarError();" onfocus="(this.type='date')" onblur="(this.type='text')" required>
                             
                             </div>  
                         </div>
 
                         <div class="row mb-6">
-                            <label for="Ingresar-nombre" class="col-md-2 col-form-label text-md-right"><img src="https://i.imgur.com/OoStcBs.jpg" width=" 50vw" title="usuario"/></label>
+                            <label for="name" class="col-md-2 col-form-label text-md-right"><img src="https://i.imgur.com/OoStcBs.jpg" width=" 50vw" title="usuario"/></label>
 
                             <div class="col-md-8">
-                                <input id="Ingresar-nombre" type="text" class="form-control" name="Ingresar-nombre" placeholder="Nombre del accionante" required>
+                                <input id="name" type="text" class="form-control" name="name" placeholder="Nombre del accionante" required>
                             </div>  
                         </div>
 
                         <div class="row mb-6">
-                            <label for="Ingresar-nit" class="col-md-2 col-form-label text-md-right"><img src="https://i.imgur.com/J8bMNoj.jpg" width=" 50vw" title="perfil"/></label>
+                            <label for="NIT" class="col-md-2 col-form-label text-md-right"><img src="https://i.imgur.com/J8bMNoj.jpg" width=" 50vw" title="perfil"/></label>
 
                             <div class="col-md-8">
-                                <input id="Ingresar-nit" type="text" class="form-control" name="Ingresar-nit" placeholder="NIT del accionante" required>
+                                <input id="NIT" type="text" class="form-control" name="NIT" placeholder="NIT del accionante" required>
                             </div>  
                         </div>
 
@@ -64,27 +65,16 @@
                             </div>  
                         </div>
 
-                        <div class="row mb-2">
-                            <label for="select" class="col-md-2 col-form-label text-md-right"> </label>
-
-                            <div class="col-md-8">                                
-                                <select name="select" class="form-control"  required>
-                                    <option selected value="0">  {{ __('Seleccione responsable') }}
-                                    
-                                        <option value="1"> {{ Auth::user()->name }}</option>
-                                            
-                                    </option>
-                                </select>
-                            </div>
+                        <div class="card-body">
+                            @livewire('user-selector-component')
                         </div>
-
-                        
+                                            
                         <div class="row mb-0">
                             <div class="col-md-6 offset-md-4">
                                 
-                                <button type="submit" class="btn btn-danger">
+                                <!--<button type="reset" class="btn btn-danger">
                                     {{ __('Cancelar') }}
-                                </button>
+                                </button>-->
                                 
                                 <button type="submit" class="btn btn-primary">
                                     {{ __('Crear') }}

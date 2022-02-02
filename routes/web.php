@@ -25,6 +25,8 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::resource('posts', App\Http\Controllers\Backend\PostController::class)
 ->middleware('auth')
 ->except('show');
+
+Route::post('storetutela', [App\Http\Controllers\TutelaController::class, 'storetutela'])->name('storetutela');
  
 Route::get('/profile/{id}', function ($id) {
     $user  =App\Models\User::find($id);
