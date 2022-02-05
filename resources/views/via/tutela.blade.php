@@ -20,7 +20,7 @@
                         </div>
                     @endif
                     
-                    <form method="POST" action="{{ route('storetutela') }}" enctype="multipart/form-data">
+                    <form method="POST" action="{{ route('tutela.store') }}">
                         @csrf
 
                         <div class="row mb-6">
@@ -72,9 +72,7 @@
                         <div class="row mb-0">
                             <div class="col-md-6 offset-md-4">
                                 
-                                <!--<button type="reset" class="btn btn-danger">
-                                    {{ __('Cancelar') }}
-                                </button>-->
+                               
                                 
                                 <button type="submit" class="btn btn-primary">
                                     {{ __('Crear') }}

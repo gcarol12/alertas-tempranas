@@ -18,6 +18,7 @@ class TutelaController extends Controller
         return view('via.tutela');
     }
 
+     
     /**
      * Show the form for creating a new resource.
      *
@@ -25,15 +26,8 @@ class TutelaController extends Controller
      */
     public function create()
     {
-        return Tutela::create([
-            'radicado' => $data['radicado'],
-            'name' => $data['name'],
-            'NIT' => $data['NIT'],
-            'email' => $data['email'],    
-            'user_id' => $data['user_id'],
-                                        
-            ]); 
-        //* return view('via.tutela');*/
+        //
+     
     }
     /**
      * Store a newly created resource in storage.
@@ -41,15 +35,27 @@ class TutelaController extends Controller
      * @param  \App\Http\Requests\StoreTutelaRequest  $request
      * @return \Illuminate\Http\Response
      */
-    public function storetutela(StoreTutelaRequest $request)
-    {
+    public function store(StoreTutelaRequest $request)
+    {            
+         $this->validate($request,[
+           'name'=>'required',
+           'email'=>'required',
+           'radicado'=>'required',
+           'NIT'=>'required',
+           'fecha'=>'required',
+           'user_id'=>'required',
+       
+           ]);
+
        $tutela = new Tutela;
-      
+       $tutela->name = $request->name;  
+       $tutela->email = $request->email; 
+       $tutela->radicado = $request->radicado; 
+       $tutela->NIT = $request->NIT; 
+       $tutela->user_id = $request->userId;     
        $tutela->save();
-     
-
-    return back()->with('status', 'Creado con éxito');
-
+       
+       return "Guardado";
     }
 
     /**

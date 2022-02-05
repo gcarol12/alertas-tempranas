@@ -24,7 +24,12 @@ class StoreTutelaRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'name' => 'required',
+            'email' => 'required',
+            'NIT' => 'required',
+            'fecha' => 'required',
+            'radicado' => 'required',
+            'user_id' => 'required',         
         ];
-    }
+    }     
 }

@@ -15,7 +15,7 @@ class Tutela extends Model
         'user_id', 
         'fecha', 
         'NIT', 
-        'email'
+        'email',
     ];
 
     public function proceso()

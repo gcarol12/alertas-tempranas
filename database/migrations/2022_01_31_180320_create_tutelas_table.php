@@ -15,13 +15,13 @@ class CreateTutelasTable extends Migration
     {
         Schema::create('tutelas', function (Blueprint $table) {
             $table->id();
-            $table->string('radicado');
-            $table->string('fecha');
-            $table->string('name');
-            $table->string('NIT');
-            $table->string('email');
-            $table->foreignId('user_id');
-            $table->timestamps('created_at');
+            $table->string('radicado')->unique()->required();
+            $table->string('fecha')->required();
+            $table->string('name')->required();
+            $table->string('NIT')->required();
+            $table->string('email')->required();
+            $table->foreignId('user_id')->required();
+            $table->timestamps();
         });
     }
 
