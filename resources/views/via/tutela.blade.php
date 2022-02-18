@@ -20,7 +20,14 @@
                         </div>
                     @endif
                     
-                    <form method="POST" action="{{ route('tutela.store') }}">
+                    @if($errors->any())
+  <ul>
+    @foreach($errors->all() as $error)
+      <li>{{$error}}</li>
+    @endforeach
+  </ul>
+@endif
+<form method="POST" action="{{ route('tutela.store') }}">
                         @csrf
 
                         <div class="row mb-6">
@@ -35,7 +42,7 @@
                             <label for="fecha" class="col-md-2 col-form-label text-md-right"><img src="https://i.imgur.com/UGz4PAr.jpg" width=" 50vw" title="calendario"/></label>
 
                             <div class="col-md-8">
-                            <input  id="fecha" class="form-control"  type="text" name="Ingresar-fecha" placeholder="Fecha de radicación SENA" 
+                            <input  id="fecha" class="form-control"  type="text" name="fecha" placeholder="Fecha de radicación SENA" 
                                     onclick="ocultarError();" onfocus="(this.type='date')" onblur="(this.type='text')" required>
                             
                             </div>  
@@ -70,10 +77,8 @@
                         </div>
                                             
                         <div class="row mb-0">
-                            <div class="col-md-6 offset-md-4">
-                                
-                               
-                                
+                            <div class="col-md-6 offset-md-4">                               
+                                                               
                                 <button type="submit" class="btn btn-primary">
                                     {{ __('Crear') }}
                                 </button>
