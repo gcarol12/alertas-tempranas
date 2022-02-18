@@ -55,9 +55,7 @@ class TutelaController extends Controller
        $tutela->user_id = $request->userId;     
        $tutela->save();
        
-       return view('mensajes')
-       ->with('proceso',"Tutela")
-       ->with('mensajes',"Proceso guardado correctamente");
+       return view('via.tutela');
     }
 
     /**
