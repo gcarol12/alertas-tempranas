@@ -25,20 +25,11 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::resource('posts', App\Http\Controllers\Backend\PostController::class)
 ->middleware('auth')
 ->except('show');
- 
-Route::get('/profile/{id}', function ($id) {
-    $user  =App\Models\User::find($id);
-    return view('profile', [
-        'user'=>$user
-    ]);
-})->name('profile');
 
-Route::get('/search/{id}', function ($id) {
-    $user  =App\Models\User::find($id);
-    return view('search', [
-        'user'=>$user
-    ]);
-})->name('search');
+Route::view('/procesosabiertos', [App\Http\Controllers\HomeController::class, 'procesosabiertos'])->name('procesosabiertos'); 
+Route::view('/profile', [App\Http\Controllers\HomeController::class, 'profile'])->name('profile');
+Route::view('/search', [App\Http\Controllers\HomeController::class, 'search'])->name('search');
+
 
 /**Rutas Via gubernativa creadas en la carpeta llamada via */
 Route::view('via/tutela', [App\Http\Controllers\HomeController::class, 'via.tutela'])->name('via.tutela');
