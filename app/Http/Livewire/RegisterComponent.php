@@ -18,7 +18,7 @@ class RegisterComponent extends Component
     public function render()
     {
         return view('livewire.register-component', [
-            "regionales" => Regional::all(),
+            "regionals" => Regional::all(),
             "departamentos" => $this->departamentos,
         ]);        
     }

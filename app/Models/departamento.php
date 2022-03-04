@@ -15,4 +15,10 @@ class Departamento extends Model
     {
         return $this->belongsTo(Regional::class);
     }
+
+    public function users()
+    {
+        return $this->hasMany(User::class);
+    }
+
 }

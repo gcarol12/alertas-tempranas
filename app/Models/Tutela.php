@@ -22,6 +22,14 @@ class Tutela extends Model
     {
         return $this->belongsTo(Proceso::class);
     }
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
+
+   
+
     
 }
 

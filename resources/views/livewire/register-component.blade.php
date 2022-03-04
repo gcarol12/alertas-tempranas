@@ -79,7 +79,7 @@
                                 <div class="col-md-8">
                                 <select name="regional" class="form-control" wire::change='listarDepartamentos($event,target,value)' required>
                                     <option value="0">  {{ __('Seleccione Regional') }} </option>
-                                     @foreach ($regionales as $regional)
+                                     @foreach ($regionals as $regional)
                                      <option value="{{$regional->id}}">{{$regional->name}} </option>
                                      @endforeach
                                 </select>                       
@@ -91,7 +91,7 @@
                                 <div class="col-md-8">
                                 <select name="departamento_id" class="form-control">
                                     <option value="0">  {{ __('Seleccione Departamento') }} </option>
-                                     @if ($departamentos)
+                                     @if ($regionals)
 
                                         @foreach ($departamentos as $departamento)
                                             <option value="{{$departamento->id}}">{{$departamento->name}} </option>
