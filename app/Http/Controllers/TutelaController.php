@@ -52,7 +52,8 @@ class TutelaController extends Controller
        $tutela->email = $request->email; 
        $tutela->radicado = $request->radicado; 
        $tutela->NIT = $request->NIT; 
-       $tutela->user_id = $request->userId;     
+       $tutela->fecha = $request->fecha; 
+       $tutela->user_id = $request->user_id;     
        $tutela->save();
        
        return view('via.tutela');

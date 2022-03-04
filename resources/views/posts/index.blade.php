@@ -119,22 +119,7 @@
                                 </button>
                             </div>
                         </div>
-                        <div class="row mb-2">
-                            <label for="email" class="col-md-2 col-form-label text-md-right"> </label>
-
-                            <div class="col-md-8">
-                                <!--<input id="email" type="email" class="form-control @error('email') is-invalid @enderror" placeholder="Seleccione" name="email" value="{{ old('email') }}" required>-->
-                                <select name="select" class="form-control"  required>
-                                    <option selected value="0">  {{ __('Seleccione responsable') }}
-                                        <optgroup label="Regional Valle">
-                                            <option value="1"> lista de responsables adjudicados al departamento al cual pertenece usuario que crea registro </option>
-                                            <option value="2"> Defensa Judicial </option>
-                                            <option value="3"> Cobro coactivo </option>
-                                    </option>
-                                </select>
-                            </div>
-                        </div>
-
+                       
                     </form>
                 </div>
             </div>

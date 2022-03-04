@@ -21,13 +21,14 @@
                     @endif
                     
                     @if($errors->any())
-  <ul>
-    @foreach($errors->all() as $error)
-      <li>{{$error}}</li>
-    @endforeach
-  </ul>
-@endif
-<form method="POST" action="{{ route('tutela.store') }}">
+                        <ul>
+                            @foreach($errors->all() as $error)
+                             <li>{{$error}}</li>
+                            @endforeach
+                        </ul>
+                    @endif
+                    
+                    <form method="POST" action="{{ route('tutela.store') }}">
                         @csrf
 
                         <div class="row mb-6">

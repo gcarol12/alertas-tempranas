@@ -25,8 +25,6 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::resource('posts', App\Http\Controllers\Backend\PostController::class)
 ->middleware('auth')
 ->except('show');
-
-Route::post('tutela.store', [App\Http\Controllers\TutelaController::class, 'store'])->name('tutela.store');
  
 Route::get('/profile/{id}', function ($id) {
     $user  =App\Models\User::find($id);
@@ -44,3 +42,12 @@ Route::view('via.insolvencia', [App\Http\Controllers\HomeController::class, 'via
 Route::view('via/pqrs', [App\Http\Controllers\HomeController::class, 'via/pqrs'])->name('via/pqrs');
 Route::view('via.recursos', [App\Http\Controllers\HomeController::class, 'via.recursos'])->name('via.recursos');
 Route::view('via/sancion', [App\Http\Controllers\HomeController::class, 'via/sancion'])->name('via/sancion');
+
+Route::post('tutela.store', [App\Http\Controllers\TutelaController::class, 'store'])->name('tutela.store');
+Route::post('sancion.store', [App\Http\Controllers\SancionController::class, 'store'])->name('sancion.store');
+Route::post('compensacion.store', [App\Http\Controllers\CompensacionController::class, 'store'])->name('compensacion.store');
+Route::post('fic.store', [App\Http\Controllers\FicController::class, 'store'])->name('fic.store');
+Route::post('recursos.store', [App\Http\Controllers\RecursosController::class, 'store'])->name('recursos.store');
+Route::post('insolvencia.store', [App\Http\Controllers\InsolvenciaController::class, 'store'])->name('insolvencia.store');
+Route::post('autocargos.store', [App\Http\Controllers\AutocargosController::class, 'store'])->name('autocargos.store');
+Route::post('pqrs.store', [App\Http\Controllers\PqrsController::class, 'store'])->name('pqrs.store');
