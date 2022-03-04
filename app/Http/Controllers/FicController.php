@@ -15,7 +15,7 @@ class FicController extends Controller
      */
     public function index()
     {
-        return view('fic.tutela');
+        return view('via.fic');
     }
 
     /**
@@ -55,7 +55,7 @@ class FicController extends Controller
         $fic->user_id = $request->user_id;     
         $fic->save();
         
-        return view('fic.tutela');
+        return view('via.fic');
     }
 
     /**

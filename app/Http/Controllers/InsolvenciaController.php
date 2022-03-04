@@ -15,7 +15,7 @@ class InsolvenciaController extends Controller
      */
     public function index()
     {
-        return view('insolvencia.tutela');
+        return view('via.insolvencia');
     }
 
     /**
@@ -55,7 +55,7 @@ class InsolvenciaController extends Controller
         $insolvencia->user_id = $request->user_id;     
         $insolvencia->save();
         
-        return view('insolvencia.tutela');
+        return view('via.insolvencia');
     }
 
     /**

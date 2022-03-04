@@ -33,6 +33,13 @@ Route::get('/profile/{id}', function ($id) {
     ]);
 })->name('profile');
 
+Route::get('/search/{id}', function ($id) {
+    $user  =App\Models\User::find($id);
+    return view('search', [
+        'user'=>$user
+    ]);
+})->name('search');
+
 /**Rutas Via gubernativa creadas en la carpeta llamada via */
 Route::view('via/tutela', [App\Http\Controllers\HomeController::class, 'via.tutela'])->name('via.tutela');
 Route::view('via/autocargos', [App\Http\Controllers\HomeController::class, 'via/autocargos'])->name('via/autocargos');

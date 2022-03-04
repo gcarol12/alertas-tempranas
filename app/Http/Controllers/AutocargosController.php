@@ -15,7 +15,7 @@ class AutocargosController extends Controller
      */
     public function index()
     {
-        return view('autocargos.tutela');
+        return view('via.autocargos');
     }
 
     /**
@@ -55,7 +55,7 @@ class AutocargosController extends Controller
         $autocargos->user_id = $request->user_id;     
         $autocargos->save();
         
-        return view('autocargos.tutela');
+        return view('via.autocargos');
     }
 
     /**

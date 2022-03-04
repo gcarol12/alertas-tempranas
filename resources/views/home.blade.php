@@ -43,7 +43,7 @@
 
                             <div class="col-md-8">
                                 <button type="submit" class="form-control">
-                                    <a class="btn md-auto center" href="{{ route('posts.index') }}">
+                                    <a class="btn md-auto center" href="{{ route('search', 'user()->id') }}">
                                         {{ __('Buscar proceso') }}
                                     </a>  
                                 </button>
@@ -67,7 +67,7 @@
 
                             <div class="col-md-8">
                                 <button type="submit" class="form-control text-md-right">
-                                    <a class="btn md-auto center" href="{{ route('posts.index') }}">
+                                    <a class="btn md-auto center" href="{{ route('search', 'user()->id') }}">
                                         {{ __('Generar reporte') }}
                                     </a>  
                                 </button>
